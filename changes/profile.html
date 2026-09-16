@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Намуун — sarn.ai</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,500;0,600;1,500;1,600&family=Onest:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="profile.css">
+</head>
+<body>
+
+<div class="phone">
+
+  <!-- ══ iOS status bar ══ -->
+  <div class="statusbar">
+    <span class="statusbar__time">16:55</span>
+    <span class="island"><i></i></span>
+    <span class="statusbar__icons">
+      <svg class="ic" viewBox="0 0 19 12" aria-hidden="true">
+        <rect x="0" y="8.5" width="3" height="3.5" rx="1"/>
+        <rect x="4.6" y="6" width="3" height="6" rx="1"/>
+        <rect x="9.2" y="3" width="3" height="9" rx="1"/>
+        <rect x="13.8" y="0" width="3" height="12" rx="1"/>
+      </svg>
+      <svg class="ic" viewBox="0 0 17 12" aria-hidden="true">
+        <path d="M8.5 11.6 6 8.9a3.6 3.6 0 0 1 5 0l-2.5 2.7Z"/>
+        <path d="M8.5 6.3a5.9 5.9 0 0 0-4.3 1.9L2.9 6.8a7.7 7.7 0 0 1 11.2 0l-1.3 1.4a5.9 5.9 0 0 0-4.3-1.9Z"/>
+        <path d="M8.5 2.2a10 10 0 0 0-7.1 3L0 3.8a12 12 0 0 1 17 0l-1.4 1.4a10 10 0 0 0-7.1-3Z"/>
+      </svg>
+      <span class="batt"><i></i></span>
+    </span>
+  </div>
+
+  <!-- ══ In-app browser chrome ══ -->
+  <header class="chrome">
+    <span class="chrome__title">sarn.ai</span>
+    <button class="chrome__close" type="button" aria-label="Хаах">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7 17 17M17 7 7 17"/></svg>
+    </button>
+  </header>
+
+  <div class="stage" data-her="namuun">
+    <main class="paper prof">
+
+      <!-- ══ hero ══ -->
+      <div class="hero hero--namuun">
+        <a class="back" href="index.html" aria-label="Буцах">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H6M11 6l-6 6 6 6"/></svg>
+        </a>
+        <div class="hero__fade"></div>
+      </div>
+
+      <!-- ══ who she is ══ -->
+      <div class="ident">
+        <h1 class="ident__name">Намуун<span>21</span></h1>
+        <p class="tags">
+          <span class="tag tag--live"><i aria-hidden="true"></i>онлайн</span>
+          <span class="tag">зөөлөн</span>
+          <span class="tag">мөрөөдөгч</span>
+        </p>
+      </div>
+
+      <div class="prof__body">
+
+        <!-- her last line, as a line — not a box -->
+        <p class="bubble">Шөнөжин зурж сууна. Тэр цагт л хамгийн гоё нь болдог юм 🙂</p>
+        <p class="said">16:48</p>
+
+        <!-- ══ the moon dial — one satin panel per screen ══ -->
+        <section class="bond satin" aria-label="Харилцааны түвшин">
+          <i class="moon moon--new bond__dial" aria-hidden="true"></i>
+          <div class="bond__info">
+            <div class="bond__row">
+              <b>Танилцсан</b>
+              <span class="stamp">0 / 10 мессеж</span>
+            </div>
+            <div class="track"><i style="--fill: 2%"></i></div>
+            <p class="bond__next">Дараагийн түвшин — <em>найзууд</em></p>
+          </div>
+        </section>
+
+        <h2 class="h2 serif">Түүний тухай</h2>
+        <p class="prose">Дүрслэх урлагийн оюутан. Өдөржин зурж, орой нь юу зурснаа ярих хүн хайдаг. Эхлээд жаахан ичимхий ч дасах тусам нээлттэй болдог.</p>
+
+        <h2 class="h2 serif">Үйлдлүүд</h2>
+        <p class="note">Худалдаж авсан бичлэг LIME чат руу тань ирнэ.</p>
+
+        <div class="acts">
+          <article class="act">
+            <span class="act__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M9 6.5 17.5 12 9 17.5V6.5Z"/></svg>
+            </span>
+            <h3 class="act__title">Sketch</h3>
+            <p class="act__desc">Чамайг бодоод нэг юм зурлаа 🙂</p>
+          </article>
+
+          <article class="act act--locked">
+            <span class="act__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <rect x="5.5" y="10.5" width="13" height="9" rx="2.5"/>
+                <path d="M8.5 10.5V8a3.5 3.5 0 0 1 7 0v2.5"/>
+              </svg>
+            </span>
+            <h3 class="act__title">Spin</h3>
+            <p class="act__desc">Sketch-ийн дараа онгойно</p>
+          </article>
+        </div>
+
+      </div>
+    </main>
+
+    <!-- ══ dock ══ -->
+    <div class="dock">
+      <button class="like" type="button" aria-pressed="false" aria-label="Дуртай">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 20.4C12 20.4 3.6 15.6 3.6 10.1A4.2 4.2 0 0 1 12 8.1a4.2 4.2 0 0 1 8.4 2c0 5.5-8.4 10.3-8.4 10.3Z"/>
+        </svg>
+      </button>
+      <button class="go go--wide" type="button">Яриа эхлүүлэх</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  var like = document.querySelector('.like');
+  like.addEventListener('click', function () {
+    var on = like.getAttribute('aria-pressed') === 'true';
+    like.setAttribute('aria-pressed', String(!on));
+    if (!on) {
+      like.classList.remove('is-pop');
+      void like.offsetWidth;
+      like.classList.add('is-pop');
+    }
+  });
+</script>
+
+</body>
+</html>

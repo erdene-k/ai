@@ -1,0 +1,335 @@
+/* ══════════════════════════════════════════════
+   sarn.ai — her page
+   content sits ON the paper; only the moon dial is a panel
+   ══════════════════════════════════════════════ */
+
+.stage {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  display: flex;
+}
+
+.prof { padding: 0 0 104px; }
+
+/* ══ hero ══ */
+
+.hero {
+  position: relative;
+  height: 400px;
+  background-size: cover;
+  background-position: center 26%;
+}
+
+.hero--namuun {
+  background-image:
+    radial-gradient(50% 44% at 46% 32%, #f3d9c2 0%, transparent 74%),
+    linear-gradient(162deg, #3a2e28 0%, #cfa88c 56%, #4a3a32 100%);
+}
+
+.hero--halin {
+  background-image:
+    radial-gradient(48% 42% at 52% 34%, #f0cfb4 0%, transparent 74%),
+    linear-gradient(158deg, #2b2724 0%, #b79274 52%, #6d5647 100%);
+}
+
+/* the photo dissolves into the paper — long, soft, no visible seam */
+.hero__fade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg,
+    rgba(251, 244, 238, 0) 34%,
+    rgba(251, 244, 238, .34) 62%,
+    rgba(251, 244, 238, .82) 84%,
+    var(--milk) 100%);
+}
+
+.back {
+  position: absolute;
+  z-index: 2;
+  top: 16px;
+  left: 16px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(22, 12, 12, .34);
+  backdrop-filter: blur(6px);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+}
+
+.back svg {
+  width: 21px; height: 21px;
+  fill: none; stroke: currentColor; stroke-width: 2;
+  stroke-linecap: round; stroke-linejoin: round;
+}
+
+/* ══ identity — rides the bottom of the fade ══ */
+
+.ident {
+  position: relative;
+  margin-top: -74px;
+  padding: 0 var(--pad);
+}
+
+.ident__name {
+  margin: 0 0 11px;
+  font-size: 37px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  line-height: 1;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.ident__name span {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: var(--mute);
+}
+
+.tags {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 13px;
+  border-radius: 999px;
+  background: rgba(160, 59, 82, .09);
+  color: var(--rosewood);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.tag--live {
+  background: rgba(63, 138, 98, .12);
+  color: #347952;
+}
+
+.tag--live i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #3f8a62;
+}
+
+/* ══ body ══ */
+
+.prof__body { padding: 26px var(--pad) 0; }
+
+.prof__body .bubble {
+  max-width: 100%;
+  margin-bottom: 7px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.said {
+  margin: 0 0 26px 4px;
+  color: var(--faint);
+  font-size: 13px;
+}
+
+/* ══ moon dial ══ */
+
+.bond {
+  border-radius: 22px;
+  padding: 16px 18px;
+  margin-bottom: 34px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.bond__dial {
+  width: 46px;
+  height: 46px;
+  border-width: 1.8px;
+  --moon-dark: #f7ebe6;
+  --moon-ring: rgba(160, 59, 82, .28);
+}
+
+/* earthshine — the unlit face still catches a little light */
+.bond__dial::after {
+  box-shadow:
+    inset -3px 2px 7px rgba(160, 59, 82, .16),
+    inset 1px -1px 3px rgba(255, 255, 255, .9);
+}
+
+.bond__info { flex: 1; min-width: 0; }
+
+.bond__row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 9px;
+}
+
+.bond__row b {
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -.2px;
+}
+
+.track {
+  height: 5px;
+  border-radius: 999px;
+  background: var(--veil);
+  overflow: hidden;
+}
+
+.track i {
+  display: block;
+  width: var(--fill);
+  min-width: 5px;
+  height: 100%;
+  border-radius: 999px;
+  background: var(--rosewood);
+}
+
+.bond__next {
+  margin: 9px 0 0;
+  color: var(--mute);
+  font-size: 13px;
+}
+
+.bond__next em {
+  font-style: normal;
+  font-weight: 600;
+  color: var(--rosewood);
+}
+
+/* ══ prose ══ */
+
+.h2 {
+  font-size: 28px;
+  margin: 0 0 8px;
+}
+
+.prose {
+  margin: 0 0 32px;
+  max-width: 34em;
+  color: var(--mute);
+  font-size: 16px;
+  line-height: 1.68;
+}
+
+.note {
+  margin: 0 0 14px;
+  color: var(--faint);
+  font-size: 13.5px;
+}
+
+/* ══ actions — frosted, so they read as part of the paper ══ */
+
+.acts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.act {
+  padding: 16px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, .78);
+  background: rgba(255, 253, 250, .5);
+  backdrop-filter: blur(8px);
+}
+
+.act__icon {
+  width: 42px;
+  height: 42px;
+  margin-bottom: 12px;
+  border-radius: 50%;
+  background: rgba(160, 59, 82, .1);
+  color: var(--rosewood);
+  display: grid;
+  place-items: center;
+}
+
+.act__icon svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linejoin: round;
+}
+
+.act__title {
+  margin: 0 0 4px;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -.2px;
+}
+
+.act__desc {
+  margin: 0;
+  color: var(--mute);
+  font-size: 13.5px;
+  line-height: 1.45;
+}
+
+.act--locked {
+  background: rgba(255, 253, 250, .26);
+  border-color: rgba(255, 255, 255, .5);
+}
+
+.act--locked .act__icon {
+  background: rgba(90, 60, 58, .08);
+  color: var(--faint);
+}
+
+.act--locked .act__title,
+.act--locked .act__desc { color: var(--faint); }
+
+/* ══ dock ══ */
+
+.dock {
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 30px var(--pad) 22px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: linear-gradient(180deg,
+    rgba(242, 221, 218, 0) 0%,
+    rgba(242, 221, 218, .88) 40%,
+    var(--blush) 68%);
+  pointer-events: none;
+}
+
+.dock > * { pointer-events: auto; }
+
+.dock .like {
+  width: 52px;
+  height: 52px;
+  background: var(--surface);
+  box-shadow: 0 6px 18px -8px rgba(120, 60, 60, .4);
+}
+
+.dock .like svg { width: 22px; height: 22px; }
+
+.go--wide {
+  flex: 1;
+  padding: 17px 24px;
+  font-size: 16px;
+  background: var(--rosewood);
+  box-shadow: 0 8px 22px -10px rgba(120, 40, 60, .6);
+}
+
+.go--wide:active { background: var(--rosewood); filter: brightness(.93); }

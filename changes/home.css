@@ -1,0 +1,218 @@
+/* ══════════════════════════════════════════════
+   sarn.ai — home
+   ══════════════════════════════════════════════ */
+
+.home { padding: 24px var(--pad) 44px; }
+
+/* ── top row ── */
+
+.home__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 34px;
+}
+
+.brand { display: inline-flex; align-items: center; gap: 10px; }
+
+.brand__moon { width: 26px; height: 26px; fill: var(--rosewood); }
+
+.brand__word {
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: -.35px;
+}
+
+/* profile — stands where the settings gear used to */
+
+.me {
+  position: relative;
+  width: 46px;
+  height: 46px;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  transition: transform .18s cubic-bezier(.3, 1.4, .5, 1);
+}
+
+.me:active { transform: scale(.93); }
+
+.me__face {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background:
+    radial-gradient(70% 62% at 50% 34%, #f6d8cb 0%, transparent 72%),
+    linear-gradient(150deg, #7b5348 0%, #c79781 52%, #55403a 100%);
+  box-shadow:
+    0 0 0 2px var(--milk),
+    0 0 0 3.5px rgba(160, 59, 82, .55);
+}
+
+.me__badge {
+  position: absolute;
+  right: -3px;
+  bottom: -3px;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  background: var(--rosewood);
+  border: 2.5px solid var(--milk);
+  display: grid;
+  place-items: center;
+}
+
+.me__badge svg { width: 11px; height: 11px; fill: #fff; }
+
+/* ── greeting ── */
+
+.hello {
+  margin: 0 0 6px;
+  color: var(--mute);
+  font-size: 15px;
+  letter-spacing: .1px;
+}
+
+.ask {
+  font-size: 47px;
+  line-height: 1.02;
+  letter-spacing: -.5px;
+  margin: 0 0 32px;
+}
+
+/* ══ chat preview — compact, satin-edged ══ */
+
+.chat {
+  position: relative;
+  border-radius: 24px;
+  padding: 14px 15px 12px;
+  margin-bottom: 36px;
+}
+
+.chat__head {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin-bottom: 11px;
+}
+
+.chat .face { width: 40px; height: 40px; }
+
+.chat__id { flex: 1; display: grid; gap: 2px; }
+
+.chat__id b {
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -.2px;
+}
+
+.level {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--mute);
+  font-size: 13px;
+}
+
+.chat__foot {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.chat__foot .stamp { flex: 1; }
+
+/* ══ all characters ══ */
+
+.section {
+  font-size: 30px;
+  margin: 0 0 16px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.card {
+  position: relative;
+  aspect-ratio: 5 / 7;
+  border: 0;
+  padding: 0;
+  border-radius: 24px;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-end;
+  background-size: cover;
+  background-position: center;
+  text-decoration: none;
+  transition: transform .18s cubic-bezier(.3, 1.2, .5, 1);
+}
+
+.card:active { transform: scale(.975); }
+
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 48%, rgba(30, 12, 14, .72) 100%);
+}
+
+.card--namuun {
+  background-image:
+    radial-gradient(55% 48% at 45% 32%, #f2d5bd 0%, transparent 72%),
+    linear-gradient(155deg, #4a392f 0%, #c39c80 55%, #33261f 100%);
+}
+.card--hulan {
+  background-image:
+    radial-gradient(52% 46% at 52% 34%, #eec9ae 0%, transparent 70%),
+    linear-gradient(200deg, #8e9aa6 0%, #b78e73 52%, #2e2621 100%);
+}
+.card--temka {
+  background-image:
+    radial-gradient(50% 44% at 48% 38%, #d9b294 0%, transparent 70%),
+    linear-gradient(165deg, #2c2c2e 0%, #6e5a4c 60%, #1c1b1a 100%);
+}
+.card--halin {
+  background-image:
+    radial-gradient(55% 48% at 50% 30%, #e8c6ab 0%, transparent 70%),
+    linear-gradient(150deg, #6b5346 0%, #c9a488 48%, #4b3c34 100%);
+}
+
+.card__moon {
+  position: absolute;
+  top: 13px;
+  right: 13px;
+  z-index: 1;
+  --moon-lit:  #fff;
+  --moon-dark: rgba(28, 14, 16, .45);
+  --moon-ring: rgba(255, 255, 255, .72);
+}
+
+.card__name {
+  position: relative;
+  z-index: 1;
+  padding: 15px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -.2px;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, .45);
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.card__name span {
+  font-size: 13.5px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, .72);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card, .me { transition: none; }
+}
